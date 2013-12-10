@@ -69,8 +69,13 @@ namespace app {
             else
                 event.type = KEYEVENT_KEYUP;
 
-            if (browser.get())
-                browser->SendKeyEvent(event);     
+            if (browser.get()) {
+                browser->SendKeyEvent(event);
+                return true;
+            }
+            else {
+                return false;
+            }
         }
 
         bool send_pointer_event( int x, int y, int button_mask )

@@ -1,4 +1,4 @@
 osgearth_cef
 ============
 
-OSG/osgEarth CEF integration
+Quick and dirty OSG/osgEarth CEF integration

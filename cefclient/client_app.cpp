@@ -6,6 +6,6 @@ ClientApp::ClientApp() {
 
 void ClientApp::OnRegisterCustomSchemes(CefRefPtr<CefSchemeRegistrar> registrar) 
 {
-  app::register_scheme(registrar, cookieable_schemes_);
+    app::register_scheme(registrar, cookieable_schemes_);
 }
 

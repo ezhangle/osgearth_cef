@@ -1,0 +1,35 @@
+body {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  font-family: Calibri, "Myriad Pro", Myriad, "Trebuchet MS", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.center {
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	height: 100vh;
+}
+
+h1 {
+  color: white;
+  min-width: 240px;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}

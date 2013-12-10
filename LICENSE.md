@@ -1,4 +1,15 @@
-                   GNU LESSER GENERAL PUBLIC LICENSE
+CEF:
+
+The CEF project is BSD licensed. Please read the LICENSE.txt file included with
+this binary distribution for licensing terms and conditions. Other software
+included in this distribution is provided under other licenses. Please visit the
+below link for complete Chromium and third-party licensing information.
+
+http://code.google.com/chromium/terms.html 
+
+OSG, osgEarth:
+
+GNU LESSER GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>

@@ -46,29 +46,6 @@ public:
     WebViewImpl* _i;
 };
 
-class CEFImage : public osg::Image
-{
-public:    
-    CEFImage(WebCore* web_core);
-    
-    CEFImage( const CEFImage& copy, const osg::CopyOp& op=osg::CopyOp::SHALLOW_COPY );
-    
-    CEFImage();
-    META_Object( osg, CEFImage )
-    
-    void loadURL( const std::string& url, int w=0, int h=0 );
-    
-    virtual bool requiresUpdateCall() const;
-    
-    virtual void update( osg::NodeVisitor* nv );    
-
-protected:
-    virtual ~CEFImage();
-  
-    WebView* _webView;
-    WebCore* _web_core;
-};
-
 } // end of namespace app
 
 #endif

@@ -112,18 +112,6 @@ bool CEFControl::handle( const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapt
             handled = true;
             break;
         }
-
-    case(osgGA::GUIEventAdapter::FRAME):
-        {
-            osg::Timer_t time = osg::Timer::instance()->tick();
-
-            //_web_core->Update();
-
-            //aa.requestRedraw();
-            aa.requestContinuousUpdate();
-            //dirty();
-            break;
-        }
     }
     return handled;
 }

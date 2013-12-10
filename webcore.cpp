@@ -32,7 +32,7 @@ namespace app {
             : webcore(webcore_->_i), width(640), height(480)
         {
             pbo = new osg::PixelBufferObject;
-            image = new CEFImage(webcore_);
+            image = new osg::Image();
 
             if (!image->getPixelBufferObject())
             {
@@ -298,7 +298,7 @@ namespace app {
         }
 
         WebCoreImpl* webcore;
-        osg::ref_ptr<CEFImage> image;
+        osg::ref_ptr<osg::Image> image;
         osg::ref_ptr<osg::PixelBufferObject> pbo;
 
         int width, height;
@@ -405,37 +405,7 @@ namespace app {
 
         return web_view;
     }
-
-    // -------------------------------------------------------------------------------------------------------------------------------------------
-
-    CEFImage::CEFImage(WebCore* web_core)
-        : _webView(0),_web_core(web_core) {}
-
-    CEFImage::CEFImage()
-        : _webView(0), _web_core(0) {}
-
-    CEFImage::CEFImage( const CEFImage& copy, const osg::CopyOp& op)
-        : osg::Image(copy, op), _webView(copy._webView) {}
-
-
-    void CEFImage::loadURL( const std::string& url, int w, int h )
-    {
-        if ( !_webView )
-        {
-            _webView = _web_core->create_view( w , h);
-        }
-    }
-
-    bool CEFImage::requiresUpdateCall() const { return true; }
-
-    void CEFImage::update( osg::NodeVisitor* nv )
-    {
-        if ( !_webView ) return;
-    }
-
-    CEFImage::~CEFImage()
-    {
-    }
+        
 
 }; // end of namespace app
 
